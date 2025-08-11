@@ -2,16 +2,15 @@
 import OpenTag from '~/assets/svg/OpenTag.svg'
 import Endtag from '~/assets/svg/EndTag.svg'
 import { IconNames } from '~/enums/IconNames'
-import { IconsMap } from '~/assets/svg/index'
+import { iconsNameSvgMap } from '~/assets/svg/index'
 import SkillComponent from '../skillComponent.vue'
 import LineSvg from '~/assets/svg/horizontal-line.svg'
 
 const iconNames = Object.values(IconNames)
-const icons = Object.values(IconsMap)
 
-const skills = iconNames.map((name, index) => ({
+const skills = iconNames.map(name => ({
   text: name,
-  icon: icons[index],
+  icon: iconsNameSvgMap[name],
 }))
 </script>
 
@@ -44,7 +43,7 @@ const skills = iconNames.map((name, index) => ({
     <LineSvg class="section__line1" />
     <LineSvg class="section__line2" />
     <div class="section__cards">
-      <div v-for="skill in skills" :key="skill.text">
+      <div v-for="skill in [...skills, ...skills, ...skills, ...skills]" :key="skill.text">
         <SkillComponent :text="skill.text" :icon="skill.icon" />
       </div>
     </div>
