@@ -18,6 +18,13 @@ export default defineNuxtConfig({
     display: 'swap',
   },
   vite: {
-    plugins: [svgLoader()]
+    plugins: [svgLoader()],
+     css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "~/styles/variables.scss" as *;`
+        }
+      }
+    }
   }
 })
