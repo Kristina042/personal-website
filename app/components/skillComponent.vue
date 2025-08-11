@@ -1,6 +1,8 @@
 <template>
     <div class="skill-card">
-     <slot/>
+        <div class="skill-card__icon">
+            <component :is="icon"/>
+        </div>
     <div>{{ text }} </div>
     </div>
 </template>
@@ -9,7 +11,8 @@
 
 <script lang="ts" setup>
     defineProps<{
-    text: string
+    text: string,
+    icon: {}
     }>()
 
 </script>
@@ -25,6 +28,8 @@
     align-items: center;
     width: 80px;
     height: 80px;
+
+
     border-radius: 12px;
 
     font-size: 10px;
@@ -42,6 +47,18 @@
     0 10px 20px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+
+
+    &__icon {
+        width: 32px;
+        height: 32px;
+
+        * {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
 }
 
 </style>

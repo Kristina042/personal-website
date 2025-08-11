@@ -21,7 +21,7 @@ defineProps<{
   width: 137px;
   height: 29px;
 
-  font-size: clamp(8px, 0.78vw, 12px);
+  font-size: 10px;
   font-weight: 400;
   line-height: 100%;
 

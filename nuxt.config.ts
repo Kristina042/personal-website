@@ -11,7 +11,8 @@ export default defineNuxtConfig({
    googleFonts: {
     families: {
       'Roboto+Condensed': [400, 700],
-      'Inter': [600]
+      'Inter': [400, 600],
+      'Allerta Stencil': [400, 600]
     },
     display: 'swap',
   },

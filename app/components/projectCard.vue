@@ -1,13 +1,11 @@
+//TODO pass images as props
 <script lang="ts" setup>
-    import navButton from './navButton.vue';
-
     defineProps<{
     title: string,
     description: string
     }>()
 
 </script>
-
 
 <template>
     <div class="project-card">
@@ -16,9 +14,12 @@
             <div class="project-card__content__description"> {{ description }} </div>
         </div>
 
-        <div class="project-card__nav">
-            <navButton class="project-card__nav__button" text="view demo"/>
-            <navButton class="project-card__nav__button" text="view docs"/>
+        <div class="project-card__buttons">
+            <div class="project-card__source-and-tech">
+                <div class="project-card__button">Source Code</div>
+                <div class="project-card__button">Tech Details</div>
+            </div>
+            <div class="project-card__demo">Live Demo App</div>
         </div>
     </div>
 </template>
@@ -31,11 +32,14 @@
         justify-content: space-between;
         align-items: center;
 
-        width: 413px;
-        height: 372px;
+        max-width: 312px;
+        max-height: 329px;
         border-radius: 12px;
 
-        padding: 24px;
+        padding-bottom: 16px;
+        padding-left: 29px;
+        padding-right: 29px;
+        padding-top: 24;
 
         font-weight: 600;
         line-height: 100%;
@@ -59,6 +63,7 @@
 
             &__title {
                 font-size: 18px;
+                align-self: center;
             }
 
             &__description{
@@ -66,16 +71,40 @@
             }
         }
 
-        &__nav {
+        &__buttons {
+            font-size: 8px;
             width: 100%;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            gap: 4px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-            &__button {
-                width: 163px;
-                height: 38px;
-            }
+        &__button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 119px;
+            height: 23px;
+            border-radius: 8px;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+
+        &__source-and-tech {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($color: #41F21E80, $alpha: 0.5);
+            width: 100%;
+            border-radius: 8px;
+            height: 23px;
         }
     }
 </style>
