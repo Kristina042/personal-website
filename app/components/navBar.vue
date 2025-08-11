@@ -20,6 +20,6 @@ import NavButton from './navButton.vue'
   justify-content: center;
   gap: 32px;
 
-  width: 100vw;
+  width: 100%;
 }
 </style>

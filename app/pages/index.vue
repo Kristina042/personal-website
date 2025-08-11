@@ -7,13 +7,9 @@ import NavBar from '~/components/navBar.vue'
 
 <template>
   <div class="home">
-    <div>
-      <NavBar />
-    </div>
+    <NavBar />
 
-    <div>
-      <AboutMe />
-    </div>
+    <AboutMe />
 
     <div class="home__tech-skills">
       <TechSkills />
@@ -27,7 +23,6 @@ import NavBar from '~/components/navBar.vue'
 
 <style scoped lang="scss">
 .home {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
