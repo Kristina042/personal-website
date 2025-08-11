@@ -1,28 +1,27 @@
 <script setup lang="ts">
-  import AboutMe from '~/components/sections/aboutMe.vue';
-  import Projects from '~/components/sections/projects.vue';
-  import TechSkills from '~/components/sections/techSkills.vue';
-  import NavBar from '~/components/navBar.vue';
+import AboutMe from '~/components/sections/aboutMe.vue'
+import Projects from '~/components/sections/projects.vue'
+import TechSkills from '~/components/sections/techSkills.vue'
+import NavBar from '~/components/navBar.vue'
 </script>
 
 <template>
   <div class="home">
     <div>
-      <NavBar/>
+      <NavBar />
     </div>
 
     <div>
-      <AboutMe/>
+      <AboutMe />
     </div>
 
     <div class="home__tech-skills">
-      <TechSkills/>
+      <TechSkills />
     </div>
 
     <div>
-      <Projects/>
+      <Projects />
     </div>
-
   </div>
 </template>
 
@@ -43,6 +42,4 @@
   display: flex;
   gap: 12px;
 }
-
-
 </style>

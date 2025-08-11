@@ -1,19 +1,14 @@
 <template>
-    <div class="nav-button">{{ text }}</div>
+  <div class="nav-button">{{ text }}</div>
 </template>
-
-
 
 <script lang="ts" setup>
 defineProps<{
   text: string
 }>()
-
 </script>
 
-
 <style lang="scss">
-
 .nav-button {
   display: flex;
   justify-content: center;
@@ -33,20 +28,19 @@ defineProps<{
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow:
-  0 10px 20px rgba(0, 0, 0, 0.5),
-  inset 0 1px 0 rgba(255, 255, 255, 0.7),
-  inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+    0 10px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 
-  &:active{
+  &:active {
     box-shadow:
-    0 10px 10px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+      0 10px 10px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   }
 }
-
 </style>

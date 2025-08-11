@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { NuxtPage } from '#components';
-import GridBackround from '~/assets/svg/grid-background.svg';
-import  CursorGlow from '~/components/cursorGlow.vue';
-
+import { NuxtPage } from '#components'
+import GridBackround from '~/assets/svg/grid-background.svg'
+import CursorGlow from '~/components/cursorGlow.vue'
 </script>
 
 <template>
   <div>
-    <GridBackround class="grid"/>
-    <CursorGlow/>
-    <NuxtPage/>
+    <GridBackround class="grid" />
+    <CursorGlow />
+    <NuxtPage />
   </div>
 </template>
 
