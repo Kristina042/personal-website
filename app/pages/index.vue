@@ -1,13 +1,7 @@
 <script setup lang="ts">
-  import NavButton from '~/components/navButton.vue'
-  import SkillComponent from '~/components/skillComponent.vue';
-  import AngularIcon from '~/assets/svg/angular.svg';
-  import javascriptIcon from '~/assets/svg/javascript.svg';
-  import ProjectCard from '~/components/projectCard.vue'
   import AboutMe from '~/components/sections/aboutMe.vue';
+  import Projects from '~/components/sections/projects.vue';
   import techSkills from '~/components/sections/techSkills.vue';
-
-  const description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam egestas, massa at imperdiet convallis, libero lorem luctus et at nibh. Donec libero leo, posuere vel mi in, tincidunt iaculis lorem. Sed et pharetra diam. Proin eget quam viverra turpis convallis elementum. Nullam a libero sit amet purus pulvinar gravida in ut ligula. Ut aliquet tincidunt feugiat.'
 </script>
 
 <template>
@@ -21,9 +15,9 @@
       <techSkills/>
     </div>
 
-    <!-- <div class="project-card-wrapper">
-      <ProjectCard title="Multiplayer TicTacToe" :description="description"></ProjectCard>
-    </div> -->
+    <div>
+      <Projects/>
+    </div>
   </div>
 </template>
 

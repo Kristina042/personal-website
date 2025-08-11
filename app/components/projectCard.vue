@@ -32,14 +32,14 @@
         justify-content: space-between;
         align-items: center;
 
-        max-width: 312px;
-        max-height: 329px;
+        width: 312px;
+        height: 329px;
         border-radius: 12px;
 
         padding-bottom: 16px;
         padding-left: 29px;
         padding-right: 29px;
-        padding-top: 24;
+        padding-top: 24px;
 
         font-weight: 600;
         line-height: 100%;
@@ -59,7 +59,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            padding: 30px;
+            padding-bottom: 20px;
 
             &__title {
                 font-size: 18px;

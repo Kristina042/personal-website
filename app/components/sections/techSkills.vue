@@ -3,7 +3,8 @@ import OpenTag from '~/assets/svg/OpenTag.svg';
 import Endtag from '~/assets/svg/EndTag.svg';
 import { IconNames } from '~/enums/IconNames';
 import { IconsMap } from '~/assets/svg/index';
-import skillComponent from '../skillComponent.vue';
+import SkillComponent from '../skillComponent.vue';
+import  LineSvg from '~/assets/svg/horizontal-line.svg'
 
 const iconNames = Object.values(IconNames)
 const icons = Object.values(IconsMap)
@@ -44,8 +45,9 @@ const skills = iconNames.map((name, index) => ({
             <div class="section__carousel-bar"/>
         </div>
 
-        <div
-            class="section__cards">
+        <LineSvg class="section__line1"/>
+        <LineSvg class="section__line2"/>
+        <div class="section__cards">
             <div
                 v-for="skill in skills"
                 :key="skill.text"
@@ -59,8 +61,9 @@ const skills = iconNames.map((name, index) => ({
 
 <style scoped lang="scss">
 .section {
+    background-color: rgba($color: #ffffff, $alpha: 0.05);
     margin-top: 68px;
-    height: 500px;
+    padding-top: 40px;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     display: flex;
@@ -132,6 +135,7 @@ const skills = iconNames.map((name, index) => ({
     }
 
     &__cards {
+        position: relative;
         margin-bottom: 100px;
         display: flex;
         flex-wrap: wrap;
@@ -141,6 +145,20 @@ const skills = iconNames.map((name, index) => ({
         width: 970px;
         height: 207px;
         padding: 31px;
+    }
+
+    &__line1 {
+        position: absolute;
+        width: 100%;
+        top: 250px;
+        color:#673AB7
+    }
+
+    &__line2 {
+        position: absolute;
+        width: 100%;
+        top: 342px;
+        color:#ffffff
     }
 }
 
