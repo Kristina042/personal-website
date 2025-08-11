@@ -1,5 +1,4 @@
 
-
 <template>
     <div class="section">
         <div class="section__text">
@@ -13,8 +12,6 @@
         <img class="section__profile-picture" src="assets/profile.png"/>
     </div>
 </template>
-
-
 
 <style scoped lang="scss">
 

@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     families: {
       'Roboto+Condensed': [400, 700],
       'Inter': [400, 600],
-      'Allerta Stencil': [400, 600]
+      'Allerta Stencil': [400, 600],
+      'Roboto Mono': [700],
     },
     display: 'swap',
   },
