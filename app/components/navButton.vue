@@ -18,8 +18,8 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 137px;
-  height: 29px;
+  min-width: 137px;
+  padding: 8px 12px;
 
   font-size: 10px;
   font-weight: 400;
@@ -46,7 +46,6 @@ defineProps<{
     0 10px 10px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-
   }
 }
 

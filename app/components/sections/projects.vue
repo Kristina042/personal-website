@@ -2,8 +2,6 @@
 import OpenTag from '~/assets/svg/OpenTag.svg';
 import Endtag from '~/assets/svg/EndTag.svg';
 import ProjectCard from '../projectCard.vue';
-import Swiggle1 from '~/assets/svg/swiggle1.svg'
-import Swiggle2 from '~/assets/svg/swiggle2.svg'
 
 const description = 'A real-time, browser-based TicTacToe game where players can create or join matches, play against friends or random opponents, and see instant updates using WebSocket-powered communication. Designed with a clean UI and responsive gameplay for both desktop and mobile.'
 </script>
@@ -17,8 +15,6 @@ const description = 'A real-time, browser-based TicTacToe game where players can
             <Endtag/>
         </div>
 
-        <Swiggle1 class="section__line1"/>
-        <Swiggle2 class="section__line2"/>
         <div class="section__cards">
             <ProjectCard title="Multiplayer TicTacToe" :description="description"/>
             <ProjectCard title="Multiplayer TicTacToe" :description="description"/>
