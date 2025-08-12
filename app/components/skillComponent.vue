@@ -1,47 +1,56 @@
 <template>
-    <div class="skill-card">
-     <slot/>
-    <div>{{ text }} </div>
+  <div class="skill-card">
+    <div class="skill-card__icon">
+      <component :is="icon" />
     </div>
+    <div>{{ text }}</div>
+  </div>
 </template>
 
-
-
 <script lang="ts" setup>
-    defineProps<{
-    text: string
-    }>()
-
+defineProps<{
+  text: string
+  icon: any
+}>()
 </script>
 
-
 <style lang="scss">
-
 .skill-card {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 115px;
+  height: 115px;
 
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 100%;
+  border-radius: 12px;
 
-    font-family: 'Roboto Condensed';
-    color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
 
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow:
+  font-family: 'Roboto Condensed';
+  color: $white;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-}
 
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    * {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 </style>
