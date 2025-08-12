@@ -3,6 +3,7 @@ import AboutMe from '~/components/sections/aboutMe.vue'
 import Projects from '~/components/sections/projects.vue'
 import TechSkills from '~/components/sections/techSkills.vue'
 import NavBar from '~/components/navBar.vue'
+import Footer from '~/components/footer.vue'
 </script>
 
 <template>
@@ -18,6 +19,8 @@ import NavBar from '~/components/navBar.vue'
     <div>
       <Projects />
     </div>
+
+    <Footer />
   </div>
 </template>
 

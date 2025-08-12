@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/google-fonts'],
   googleFonts: {
     families: {
-      'Roboto+Condensed': [400, 700],
+      'Roboto+Condensed': [400,600, 700],
       Inter: [400, 600],
       'Allerta Stencil': [400, 600],
       'Roboto Mono': [700],

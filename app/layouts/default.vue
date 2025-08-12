@@ -7,8 +7,8 @@ import CursorGlow from '~/components/cursorGlow.vue'
 <template>
   <div>
     <GridBackround class="grid" />
-    <CursorGlow />
-    <NuxtPage />
+    <!-- <CursorGlow /> -->
+    <NuxtPage/>
   </div>
 </template>
 

@@ -13,13 +13,16 @@ import NavButton from './navButton.vue'
 
 <style scoped lang="scss">
 .nav-bar {
-  background-color: rgba($black, 50%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba($black, 25%);
+  backdrop-filter: blur(2px);
   padding: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
-
   width: 100%;
 }
 </style>

@@ -3,4 +3,5 @@ export enum IconNames {
   JAVASCRIPT = 'Javascript',
   GRAPHQL = 'graphQL',
   RXJS = 'RxJS',
+  NUXT = 'Nuxt',
 }
