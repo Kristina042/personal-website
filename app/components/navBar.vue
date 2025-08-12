@@ -18,7 +18,7 @@ import NavButton from './navButton.vue'
   z-index: 100;
   background-color: rgba($black, 25%);
   backdrop-filter: blur(2px);
-  padding: 13px;
+  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

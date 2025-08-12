@@ -8,8 +8,13 @@ defineProps<{
 
 <template>
   <div class="project-card">
+
     <div class="project-card__content">
       <div class="project-card__content__title">{{ title }}</div>
+      <div class="project-card__images">
+        <img class="project-card__laptop" src="/assets/laptop.png"/>
+        <img class="project-card__phone" src="/assets/phone.png"/>
+      </div>
       <div class="project-card__content__description">{{ description }}</div>
     </div>
 
@@ -30,8 +35,8 @@ defineProps<{
   justify-content: space-between;
   align-items: center;
 
-  width: 312px;
-  height: 329px;
+  width: 420px;
+  height: 460px;
   border-radius: 12px;
 
   padding-bottom: 16px;
@@ -53,27 +58,54 @@ defineProps<{
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    height: 120px;
+  }
+
+  &__laptop {
+    position: absolute;
+    width: 230px;
+    height: 130px;
+    right: -50px;
+
+  }
+
+  &__phone {
+    position: absolute;
+    width: 150px;
+    height: 140px;
+    right: -120px;
+    top: 10px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     padding-bottom: 20px;
 
     &__title {
-      font-size: 18px;
+      font-size: 22px;
       align-self: center;
     }
 
     &__description {
-      font-size: 10px;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
     }
   }
 
   &__buttons {
-    font-size: 8px;
+    font-size: 12px;
     width: 100%;
     display: flex;
-    gap: 4px;
+    gap: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -83,9 +115,9 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 119px;
-    height: 23px;
-    border-radius: 8px;
+    width: 160px;
+    height: 30px;
+    border-radius: 10px;
     background-color: rgba($color: #000000, $alpha: 0.5);
   }
 
@@ -102,7 +134,7 @@ defineProps<{
     background-color: rgba($color: #41f21e80, $alpha: 0.5);
     width: 100%;
     border-radius: 8px;
-    height: 23px;
+    height: 30px;
   }
 }
 </style>

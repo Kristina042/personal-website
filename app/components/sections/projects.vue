@@ -28,11 +28,11 @@ const description =
 <style lang="scss" scoped>
 .section {
   position: relative;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 80px;
-  padding-bottom: 100px;
+  padding: 200px;
+  margin-bottom: 200px;
   width: 100%;
 
   &__title {
@@ -49,7 +49,7 @@ const description =
   }
 
   &__cards {
-    max-width: 1024px;
+    max-width: 1400px;
     display: flex;
     flex-wrap: wrap;
     gap: 44px;

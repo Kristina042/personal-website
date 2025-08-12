@@ -18,15 +18,15 @@ defineProps<{
 .skill-card {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 115px;
+  height: 115px;
 
   border-radius: 12px;
 
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 100%;
 
@@ -44,8 +44,8 @@ defineProps<{
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 
   &__icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 
     * {
       width: 100%;

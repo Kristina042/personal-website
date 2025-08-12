@@ -40,8 +40,8 @@ const skills = iconNames.map(name => ({
       <div class="section__carousel-bar" />
     </div>
 
-    <LineSvg class="section__line1" />
-    <LineSvg class="section__line2" />
+    <!-- <LineSvg class="section__line1" />
+    <LineSvg class="section__line2" /> -->
     <div class="section__cards">
       <div v-for="skill in [...skills, ...skills, ...skills, ...skills]" :key="skill.text">
         <SkillComponent :text="skill.text" :icon="skill.icon" />
@@ -52,8 +52,7 @@ const skills = iconNames.map(name => ({
 
 <style scoped lang="scss">
 .section {
-  background-color: rgba($color: #ffffff, $alpha: 0.05);
-  margin-top: 68px;
+  background-color: rgba($color: #ffffff, $alpha: 0.01);
   padding-top: 40px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -63,7 +62,7 @@ const skills = iconNames.map(name => ({
   align-items: center;
 
   &__title {
-    padding-top: 30px;
+    padding-top: 50px;
     height: 36px;
     display: flex;
     justify-content: center;
@@ -72,7 +71,7 @@ const skills = iconNames.map(name => ({
     color: white;
     font-family: 'Roboto Mono';
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
   }
 
   &__carousel-header {
@@ -86,7 +85,7 @@ const skills = iconNames.map(name => ({
 
   &__carousel-titles {
     display: flex;
-    gap: 27px;
+    gap: 50px;
     color: white;
     font-family: 'Allerta Stencil';
     font-weight: 400;
@@ -94,7 +93,7 @@ const skills = iconNames.map(name => ({
 
   &__carousel-bar {
     background-color: #673ab7;
-    width: 110px;
+    width: 160px;
     height: 4px;
     border-radius: 24px;
   }
@@ -103,15 +102,15 @@ const skills = iconNames.map(name => ({
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
     line-height: 100%;
 
     &--small {
-      font-size: 12px;
+      font-size: 20px;
     }
 
     &--big {
-      font-size: 24px;
+      font-size: 32px;
     }
   }
 
@@ -127,15 +126,15 @@ const skills = iconNames.map(name => ({
 
   &__cards {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 140px;
     display: flex;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     gap: 12px;
-    width: 970px;
+    width: 1490px;
     height: 207px;
-    padding: 31px;
+    padding: 50px;
   }
 
   &__line1 {

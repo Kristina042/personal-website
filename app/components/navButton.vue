@@ -13,10 +13,10 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 137px;
-  padding: 8px 12px;
+  min-width: 170px;
+  padding: 12px 16px;
 
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 100%;
 

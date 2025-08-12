@@ -15,40 +15,41 @@
 
 <style scoped lang="scss">
 .section {
-  margin-top: 80px;
+  padding: 200px;
+  margin-bottom: 50px;
   color: white;
   display: flex;
-  gap: 64px;
+  gap: 100px;
 
   &__text {
     display: flex;
     flex-direction: column;
-    width: 465px;
+    gap: 24px;
+    width: 1000px;
   }
 
   &__name {
     font-family: 'Roboto Condensed';
     font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 30px;
   }
 
   &__title {
     font-family: 'Allerta Stencil';
     font-weight: 400;
-    font-size: 24px;
-    margin-bottom: 16px;
+    font-size: 44px;
   }
 
   &__description {
     font-family: 'Roboto Condensed';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 30px;
+    line-height: 40px;
   }
 
   &__profile-picture {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     box-shadow: 0 0 25px rgba(#673ab7, 0.9);
   }

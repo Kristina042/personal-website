@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'Roboto+Condensed': [400,600, 700],
-      Inter: [400, 600],
+      'Inter': [400, 600],
       'Allerta Stencil': [400, 600],
       'Roboto Mono': [700],
     },
