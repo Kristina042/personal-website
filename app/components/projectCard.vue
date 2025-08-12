@@ -39,15 +39,12 @@ defineProps<{
   height: 460px;
   border-radius: 12px;
 
-  padding-bottom: 16px;
-  padding-left: 29px;
-  padding-right: 29px;
-  padding-top: 24px;
+  padding: 24px 29px 16px;
 
   font-weight: 600;
   line-height: 100%;
   font-family: 'Inter';
-  color: white;
+  color: $white;
 
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(8px);
@@ -118,7 +115,7 @@ defineProps<{
     width: 160px;
     height: 30px;
     border-radius: 10px;
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: rgba($color: $black, $alpha: 0.5);
   }
 
   &__source-and-tech {
@@ -131,7 +128,7 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba($color: #41f21e80, $alpha: 0.5);
+    background-color: rgba($color: $green, $alpha: 0.5);
     width: 100%;
     border-radius: 8px;
     height: 30px;

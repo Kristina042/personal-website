@@ -52,8 +52,9 @@ const skills = iconNames.map(name => ({
 
 <style scoped lang="scss">
 .section {
-  background-color: rgba($color: #ffffff, $alpha: 0.01);
+  background-color: rgba($color: $white, $alpha: 0.01);
   padding-top: 40px;
+  padding-bottom: 40px;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   display: flex;
@@ -68,7 +69,7 @@ const skills = iconNames.map(name => ({
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: $white;
     font-family: 'Roboto Mono';
     font-weight: 700;
     font-size: 36px;
@@ -86,7 +87,7 @@ const skills = iconNames.map(name => ({
   &__carousel-titles {
     display: flex;
     gap: 50px;
-    color: white;
+    color: $white;
     font-family: 'Allerta Stencil';
     font-weight: 400;
   }
@@ -106,11 +107,11 @@ const skills = iconNames.map(name => ({
     line-height: 100%;
 
     &--small {
-      font-size: 20px;
+      font-size: 24px;
     }
 
     &--big {
-      font-size: 32px;
+      font-size: 36px;
     }
   }
 
@@ -141,14 +142,14 @@ const skills = iconNames.map(name => ({
     position: absolute;
     width: 100%;
     top: 250px;
-    color: #673ab7;
+    color: $purple;
   }
 
   &__line2 {
     position: absolute;
     width: 100%;
     top: 342px;
-    color: #ffffff;
+    color: $white;
   }
 }
 </style>

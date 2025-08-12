@@ -42,7 +42,7 @@ const description =
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: $white;
     font-family: 'Roboto Mono';
     font-weight: 700;
     font-size: 32px;

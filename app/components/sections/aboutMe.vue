@@ -17,7 +17,7 @@
 .section {
   padding: 200px;
   margin-bottom: 50px;
-  color: white;
+  color: $white;
   display: flex;
   gap: 100px;
 
@@ -51,7 +51,7 @@
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    box-shadow: 0 0 25px rgba(#673ab7, 0.9);
+    box-shadow: 0 0 25px rgba($purple, 0.9);
   }
 }
 </style>

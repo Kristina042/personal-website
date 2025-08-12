@@ -31,7 +31,7 @@ defineProps<{
   line-height: 100%;
 
   font-family: 'Roboto Condensed';
-  color: white;
+  color: $white;
 
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);

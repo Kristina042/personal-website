@@ -28,7 +28,7 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
 <style scoped lang="scss">
 .footer {
   font-family: 'Roboto Condensed';
-  color: white;
+  color: $white;
   background-color: rgba($black, 25%);
   backdrop-filter: blur(3px);
   width: 100%;
@@ -48,7 +48,7 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
     font-weight: 600;
     font-size: 14px;
     border-bottom: solid 1px;
-    border-color: rgba($color: #ffffff, $alpha: 0.25);
+    border-color: rgba($color: $white, $alpha: 0.25);
   }
 
   &__bottom {
