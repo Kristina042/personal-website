@@ -8,19 +8,18 @@ import Footer from '~/components/footer.vue'
 
 <template>
   <div class="home">
-    <NavBar />
 
-    <AboutMe />
-
+    <NavBar/>
+    <AboutMe/>
     <div class="home__tech-skills">
-      <TechSkills />
+      <TechSkills/>
     </div>
 
     <div>
-      <Projects />
+      <Projects/>
     </div>
 
-    <Footer />
+    <Footer/>
   </div>
 </template>
 
@@ -32,6 +31,10 @@ import Footer from '~/components/footer.vue'
   justify-content: center;
 
   &__tech-skills {
+    width: 100%;
+  }
+
+  &__nav {
     width: 100%;
   }
 }

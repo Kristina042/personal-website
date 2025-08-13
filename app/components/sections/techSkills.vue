@@ -151,7 +151,7 @@ onUnmounted(() => clearInterval(intervalId))
   flex-direction: column;
   align-items: center;
 
-  padding: 24px 0 64px;
+  padding: 56px 0;
 
 
   &__carousel {
@@ -167,10 +167,11 @@ onUnmounted(() => clearInterval(intervalId))
 
   &__skills-wrapper {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 12px;
     row-gap: 8px;
+    padding: 30px 0;
   }
 
   &__title {
@@ -254,106 +255,4 @@ onUnmounted(() => clearInterval(intervalId))
 }
 
 
-.section {
-  background-color: rgba($color: $white, $alpha: 0.01);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-
-  &__title {
-    padding-top: 50px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: $white;
-    font-family: 'Roboto Mono';
-    font-weight: 700;
-    font-size: 36px;
-  }
-
-  &__carousel-header {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__carousel-titles {
-    display: flex;
-    gap: 50px;
-    color: $white;
-    font-family: 'Allerta Stencil';
-    font-weight: 400;
-  }
-
-  &__carousel-bar {
-    background-color: #673ab7;
-    width: 160px;
-    height: 4px;
-    border-radius: 24px;
-  }
-
-  &__carousel-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
-    line-height: 100%;
-
-    &--small {
-      font-size: 24px;
-    }
-
-    &--big {
-      font-size: 36px;
-    }
-  }
-
-  &__image--small {
-    height: 16px;
-    width: 16px;
-  }
-
-  &__image--big {
-    height: 32px;
-    width: 32px;
-  }
-
-  &__cards {
-    position: relative;
-    margin-bottom: 140px;
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    width: 1490px;
-    height: 207px;
-    padding: 50px;
-  }
-
-.fade-slide-enter-active, .fade-slide-leave-active {
-  transition: all 0.5s ease;
-}
-
-.fade-slide-enter-from {
-  opacity: 0;
-  transform: translateX(30px);
-}
-.fade-slide-leave-to {
-  opacity: 0;
-  transform: translateX(-30px);
-}
-}
 </style>
