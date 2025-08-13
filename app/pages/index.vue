@@ -10,16 +10,18 @@ import Footer from '~/components/footer.vue'
   <div class="home">
 
     <NavBar/>
-    <AboutMe/>
-    <div class="home__tech-skills">
-      <TechSkills/>
-    </div>
+
+    <!-- <AboutMe/>
+
+
+    <TechSkills/>
+
 
     <div>
       <Projects/>
     </div>
 
-    <Footer/>
+    <Footer/> -->
   </div>
 </template>
 
@@ -29,18 +31,5 @@ import Footer from '~/components/footer.vue'
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  &__tech-skills {
-    width: 100%;
-  }
-
-  &__nav {
-    width: 100%;
-  }
-}
-
-.skills-wrapper {
-  display: flex;
-  gap: 12px;
 }
 </style>

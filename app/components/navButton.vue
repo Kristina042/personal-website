@@ -8,7 +8,7 @@ defineProps<{
 }>()
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .nav-button {
   display: flex;
   justify-content: center;
@@ -42,5 +42,15 @@ defineProps<{
       inset 0 1px 0 rgba(255, 255, 255, 0.7),
       inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   }
+
+  //~3840px
+  @media (min-width: 240rem) {
+    min-width:280px;
+    font-size: 28px;
+    border-radius: 32px;
+    padding: 16px 16px;
+  }
 }
+
+
 </style>

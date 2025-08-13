@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+html {
+  font-size: 100%; /* 16px by default */
+}
+
 *,
 *::before,
 *::after {

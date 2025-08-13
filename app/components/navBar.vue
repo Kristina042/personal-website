@@ -4,10 +4,10 @@ import NavButton from './navButton.vue'
 
 <template>
   <div class="nav-bar">
-    <NavButton text="About Me" />
-    <NavButton text="Skills" />
-    <NavButton text="Projects" />
-    <NavButton text="CV" />
+    <NavButton class="nav-bar__item" text="About Me"/>
+    <NavButton class="nav-bar__item" text="Skills"/>
+    <NavButton class="nav-bar__item" text="Projects"/>
+    <NavButton  class="nav-bar__CV" text="CV"/>
   </div>
 </template>
 
@@ -18,11 +18,24 @@ import NavButton from './navButton.vue'
   z-index: 100;
   background-color: rgba($black, 25%);
   backdrop-filter: blur(2px);
-  padding: 25px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 32px;
+  align-items: center;
   width: 100%;
+  padding: 10px;
+
+  &__item {
+    display: none;
+  }
+
+  @media (min-width: 48rem) { // ~768px
+    padding: 25px;
+    gap: 32px;
+
+    &__item {
+      display:flex;
+    }
+  }
+
 }
 </style>
