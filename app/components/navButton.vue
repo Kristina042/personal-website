@@ -13,10 +13,10 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 170px;
-  padding: 12px 16px;
+  min-width: 120px;
+  padding: 10px 14px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 100%;
 
@@ -41,6 +41,19 @@ defineProps<{
       0 10px 10px rgba(0, 0, 0, 0.5),
       inset 0 1px 0 rgba(255, 255, 255, 0.7),
       inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    min-width: 155px;
+    padding: 12px 16px;
+
+    font-size: 16px;
+  }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+    min-width: 180px;
   }
 
   //~3840px
