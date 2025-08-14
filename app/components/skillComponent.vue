@@ -21,12 +21,13 @@ defineProps<{
   gap: 8px;
   justify-content: center;
   align-items: center;
-  width: 115px;
-  height: 115px;
+  width: 75px;
+  height: 75px;
+  padding: 3px;
 
-  border-radius: 12px;
+  border-radius: 8px;
 
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 100%;
 
@@ -44,12 +45,50 @@ defineProps<{
     inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 
   &__icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     * {
       width: 100%;
       height: 100%;
+    }
+  }
+
+  /* Large Mobile */
+  @media (min-width: 30rem) {
+    width: 95px;
+    height: 95px;
+    font-size: 16px;
+    gap: 10px;
+
+    &__icon {
+      width: 35px;
+      height: 35px;
+
+      * {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+
+    width: 115px;
+    height: 115px;
+    border-radius: 18px;
+    font-size: 20px;
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+
+      * {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

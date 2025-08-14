@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OpenTag from '~/assets/svg/OpenTag.svg'
+import Endtag from '~/assets/svg/EndTag.svg'
 import { IconNames } from '~/enums/IconNames'
 import { iconsNameSvgMap } from '~/assets/svg/index'
 import SkillComponent from '../skillComponent.vue'
@@ -7,9 +9,7 @@ import { Carousel, Slide } from 'vue3-carousel'
 
 import PaintBrush from '~/assets/paint-brush.png'
 
-
 const iconNames = Object.values(IconNames)
-
 
 const backendSkills = [
   { text: 'Node.js', icon: iconsNameSvgMap[IconNames.ANGULAR] },
@@ -101,7 +101,9 @@ onUnmounted(() => clearInterval(intervalId))
   >
 
     <div class="tech-skills__title">
-      Tech Skills
+      <OpenTag />
+      <div>Tech Skills</div>
+      <Endtag />
     </div>
 
     <div class="tech-skills__nav">
@@ -135,7 +137,6 @@ onUnmounted(() => clearInterval(intervalId))
             :text="skill.text"
           />
         </div>
-
       </Slide>
     </Carousel>
   </div>
@@ -155,31 +156,34 @@ onUnmounted(() => clearInterval(intervalId))
 
 
   &__carousel {
-    width: 100%;
+    max-width: 370px;
     overflow: hidden;
   }
 
   &__slide {
+    max-width: 370px;
     display: flex;
-    width: 100%;
-    max-height: 200px;
   }
 
   &__skills-wrapper {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 12px;
-    row-gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 8px;
+    row-gap: 10px;
     padding: 30px 0;
   }
 
   &__title {
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
     font-weight: 700;
     font-family: "Roboto Mono";
 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &__nav {
@@ -201,16 +205,6 @@ onUnmounted(() => clearInterval(intervalId))
   }
 
   &__nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    cursor: pointer;
-
-    height: 40px;
-
-    font-size: 16px;
     font-family: "Allerta Stencil";
 
     opacity: 0.75;
@@ -218,8 +212,11 @@ onUnmounted(() => clearInterval(intervalId))
     transition: font-size ease-in-out .1s;
     transform-origin: center;
 
+    display: none;
+
     &--active {
-      font-size: 32px;
+      display: block;
+      font-size: 28px;
 
       opacity: unset;
 
@@ -237,7 +234,7 @@ onUnmounted(() => clearInterval(intervalId))
 
   &__nav-progress-wrapper {
     background-color: rgba($white, 0.5);
-    width: 200px;
+    width: 150px;
     height: 6px;
     border-radius: 24px;
   }
@@ -252,6 +249,65 @@ onUnmounted(() => clearInterval(intervalId))
     transition: width ease 0.5s;
   }
 
+    /* Large Mobile */
+  @media (min-width: 30rem) {
+    &__skills-wrapper {
+      column-gap: 14px;
+      row-gap:14px;
+      padding: 30px 0;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    &__skills-wrapper {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__nav-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      cursor: pointer;
+
+      &--active {
+        font-size: 32px;
+
+        opacity: unset;
+
+        .tech-skills__nav-img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+
+    &__skills-wrapper {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  /* Large Desktop */
+  @media (min-width: 90rem) {
+    &__skills-wrapper {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
 }
 
 
