@@ -19,8 +19,6 @@ const description =
       <ProjectCard title="Multiplayer TicTacToe" :description="description" />
       <ProjectCard title="Multiplayer TicTacToe" :description="description" />
       <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
     </div>
   </div>
 </template>
@@ -30,8 +28,8 @@ const description =
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding: 200px;
+  gap: 50px;
+  padding: 100px;
   margin-bottom: 200px;
   width: 100%;
 
@@ -49,22 +47,45 @@ const description =
   }
 
   &__cards {
-    max-width: 1400px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 44px;
-  }
-
-  &__line1 {
-    position: absolute;
-    top: 0px;
     width: 100%;
   }
 
-  &__line2 {
-    position: absolute;
-    top: 80px;
-    width: 100%;
+  /* Large Mobile */
+  @media (min-width: 30rem) {}
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
   }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+    padding: 200px;
+    gap: 80px;
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Large Desktop */
+  @media (min-width: 90rem) {
+    padding: 200px;
+    gap: 80px;
+
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* 4K */
+  @media (min-width: 240rem) {}
+
 }
 </style>
