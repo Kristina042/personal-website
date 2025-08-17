@@ -13,29 +13,33 @@ const iconNames = Object.values(IconNames)
 
 const backendSkills = [
   { text: 'Node.js', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Express', icon: iconsNameSvgMap[IconNames.GRAPHQL] }
+  { text: 'Express', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'Supabase', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'Firebase', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'C', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
 ]
 
 const frontendSkills = [
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] }
+  { text: 'TypeScript', icon: PaintBrush },
+  { text: 'JavaScript', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
+  { text: 'Angular', icon: iconsNameSvgMap[IconNames.ANGULAR]},
+  { text: 'RxJS', icon: iconsNameSvgMap[IconNames.RXJS] },
+  { text: 'NGRX', icon: iconsNameSvgMap[IconNames.NGRX] },
+  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.VUE]},
+  { text: 'Nuxt', icon: iconsNameSvgMap[IconNames.NUXT] },
+  { text: 'Pinia', icon: iconsNameSvgMap[IconNames.PINIA] },
+  { text: 'SCSS/SASS', icon: iconsNameSvgMap[IconNames.SCSS] },
+  { text: 'Tailwind', icon: iconsNameSvgMap[IconNames.TAILWIND] },
+  { text: 'GraphQL', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'REST API', icon: iconsNameSvgMap[IconNames.REST] },
+  { text: 'HTML5', icon: iconsNameSvgMap[IconNames.HTML]},
+  { text: 'CSS3', icon: iconsNameSvgMap[IconNames.CSS] },
 ]
 
 const managementSkills = [
   { text: 'Jira', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
-  { text: 'Agile', icon: iconsNameSvgMap[IconNames.ANGULAR] }
+  { text: 'GitHub', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
+  { text: 'GitLab', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
 ]
 
 const slides = ref([

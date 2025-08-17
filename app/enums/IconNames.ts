@@ -1,7 +1,16 @@
 export enum IconNames {
-  ANGULAR = 'Angular',
+  TS = 'TypeScript',
   JAVASCRIPT = 'Javascript',
-  GRAPHQL = 'graphQL',
+  ANGULAR = 'Angular',
   RXJS = 'RxJS',
+  NGRX = 'NGRX',
+  VUE = 'VueJS',
   NUXT = 'Nuxt',
+  PINIA = 'Pinia',
+  SCSS = 'SCSS',
+  TAILWIND = 'Tailwind',
+  GRAPHQL = 'graphQL',
+  REST = 'REST',
+  HTML = 'HTML',
+  CSS = 'CSS',
 }

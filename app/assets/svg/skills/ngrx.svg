@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-50 -50 985 1036"
+     fill="none">
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1"
+      gradientTransform="matrix(0 507.22601 -479.57501 0 442.9857483 427.93551636)"
+      gradientUnits="userSpaceOnUse">
+      <stop stopColor="#aa1bb6" />
+      <stop offset="1" stopColor="#452070" />
+    </radialGradient>
+    <radialGradient id="b" cx="0" cy="0" r="1"
+      gradientTransform="matrix(314.00042 156.99986 -140.10327 280.20717 441.99906213 454.49818724)"
+      gradientUnits="userSpaceOnUse">
+      <stop offset=".271" stopColor="#b1219b" />
+      <stop offset="1" stopColor="#5306A1" />
+    </radialGradient>
+  </defs>
+  <path fill="url(#a)" d="m884.66201 156.28199-31.932 501.024-305.308-656.962 337.24 155.938zm-211.467 647.85-230.693 131.524-230.697-131.524 13.041-76.656h435.323l13.026 76.656zm-641.251-146.826-31.606-501.024 337.241-155.938-305.635 656.962z"/>
+  <path fill="url(#b)" fillRule="evenodd" clipRule="evenodd"
+    d="m659.088 405.822-.031.223c-13.501 78.671-65.716 128.406-156.643 149.205 ..."/>
+</svg>

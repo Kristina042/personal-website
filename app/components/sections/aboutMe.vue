@@ -118,6 +118,10 @@
   }
 
   @media (min-width: 638px) {
+    &__title {
+      font-size: 36px;
+    }
+
     &__text {
       max-width: 500px;
       padding: 0px;

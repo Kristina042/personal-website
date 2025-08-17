@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import nuxtIcon from "~/assets/svg/nuxt.svg";
+import nuxtIcon from "~/assets/svg/skills/nuxt.svg";
 import linkedInIcon from '~/assets/svg/linkedIn.svg'
 import gitHubIcon from '~/assets/svg/gitHub.svg'
 </script>

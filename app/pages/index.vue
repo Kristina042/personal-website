@@ -8,20 +8,13 @@ import Footer from '~/components/footer.vue'
 
 <template>
   <div class="home">
-
     <NavBar/>
-
-    <!-- <AboutMe/>
-
-
+    <AboutMe/>
     <TechSkills/>
-
-
     <div>
       <Projects/>
     </div>
-
-    <Footer/> -->
+    <Footer/>
   </div>
 </template>
 

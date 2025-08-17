@@ -1,17 +1,20 @@
 <template>
   <div class="skill-card">
     <div class="skill-card__icon">
-      <component :is="icon" />
+      <component v-if="isSvg" :is="icon" />
+      <img v-else :src="(icon as string)" />
     </div>
     <div>{{ text }}</div>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
+const props = defineProps<{
   text: string
-  icon: any
+  icon: object | string
 }>()
+
+const isSvg = computed(() => typeof props.icon === 'object')
 </script>
 
 <style lang="scss">
