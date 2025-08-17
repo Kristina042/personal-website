@@ -33,7 +33,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 20px;
+
+  padding: 130px 20px 80px;
 
   &__text {
     padding: 0px;
@@ -54,7 +55,6 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 1.5;
-   //max-width: 160px;
   }
 
   &__description {
@@ -126,7 +126,7 @@
 
   /* Tablet */
   @media (min-width: 48rem) {
-    padding: 100px 50px;
+    padding: 150px 100px 100px;
     margin-bottom: 50px;
     color: $white;
     display: flex;
@@ -183,7 +183,7 @@
 
   /* Laptop */
   @media (min-width: 64rem) {
-    padding: 200px 50px;
+    padding: 250px 100px 200px;
     margin-bottom: 50px;
     color: $white;
     display: flex;
