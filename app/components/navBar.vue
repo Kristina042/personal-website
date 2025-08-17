@@ -13,16 +13,18 @@ import NavButton from './navButton.vue'
 
 <style scoped lang="scss">
 .nav-bar {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   background-color: rgba($black, 25%);
   backdrop-filter: blur(2px);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding-left: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   &__item {
     display: none;
@@ -32,10 +34,13 @@ import NavButton from './navButton.vue'
     padding: 25px;
     gap: 32px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     &__item {
       display:flex;
     }
   }
-
 }
 </style>
