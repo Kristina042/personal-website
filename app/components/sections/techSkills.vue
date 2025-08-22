@@ -8,6 +8,8 @@ import 'vue3-carousel/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 
 import PaintBrush from '~/assets/paint-brush.png'
+import Gear from '~/assets/gear.png'
+import Clock from '~/assets/clock.png'
 
 const iconNames = Object.values(IconNames)
 
@@ -49,9 +51,9 @@ const slides = ref([
 ])
 
 const titles = ref([
-  { icon: PaintBrush, text: 'Back-End' },
+  { icon: Gear, text: 'Back-End' },
   { icon: PaintBrush, text: 'Front-End' },
-  { icon: PaintBrush, text: 'Management' },
+  { icon: Clock, text: 'Management' },
 ])
 
 const carouselConfig = {

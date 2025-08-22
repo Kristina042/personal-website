@@ -1,8 +1,9 @@
-//TODO pass images as props
 <script lang="ts" setup>
 defineProps<{
   title: string
   description: string
+  laptopImage: string
+  mobileImage: string
 }>()
 </script>
 
@@ -13,7 +14,9 @@ defineProps<{
       <div class="project-card__content__title">{{ title }}</div>
       <div class="project-card__images">
         <img class="project-card__laptop" src="/assets/laptop.png"/>
+        <img class="project-card__laptop-image" :src="laptopImage"/>
         <img class="project-card__phone" src="/assets/phone.png"/>
+        <img class="project-card__phone-image" :src="mobileImage"/>
       </div>
       <div class="project-card__content__description">{{ description }}</div>
     </div>
@@ -70,6 +73,13 @@ defineProps<{
     height: 110px;
     right: -10px;
 
+    &-image {
+      position: absolute;
+      width: 163px;
+      height: 97px;
+      right: 9px;
+      bottom: 14px;
+    }
   }
 
   &__phone {
@@ -78,6 +88,15 @@ defineProps<{
     height: 120px;
     right: -70px;
     top: 10px;
+
+    &-image {
+      position: absolute;
+      width: 48px;
+      height: 89px;
+      right: -29px;
+      top: 26px;
+      border-radius: 4px;
+    }
   }
 
   &__content {
@@ -151,6 +170,13 @@ defineProps<{
       height: 130px;
       right: -50px;
 
+      &-image{
+        position: absolute;
+        width: 188px;
+        height: 115px;
+        right: -29px;
+        bottom: 5px;
+      }
     }
 
     &__phone {
@@ -159,9 +185,18 @@ defineProps<{
       height: 140px;
       right: -120px;
       top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 54px;
+        height: 105px;
+        right: -72px;
+        top: 28px;
+        border-radius: 4px;
+      }
     }
 
-        &__content {
+    &__content {
       display: flex;
       flex-direction: column;
       gap: 30px;
@@ -229,6 +264,13 @@ defineProps<{
       height: 110px;
       right: -10px;
 
+      &-image {
+        position: absolute;
+        width: 163px;
+        height: 97px;
+        right: 9px;
+        bottom: 14px;
+      }
     }
 
     &__phone {
@@ -237,6 +279,15 @@ defineProps<{
       height: 120px;
       right: -70px;
       top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 48px;
+        height: 89px;
+        right: -29px;
+        top: 26px;
+        border-radius: 4px;
+      }
     }
 
     &__content {
@@ -269,6 +320,14 @@ defineProps<{
       width: 230px;
       height: 130px;
       right: -50px;
+
+      &-image{
+        position: absolute;
+        width: 186px;
+        height: 115px;
+        right: -28px;
+        bottom: 5px;
+      }
     }
 
     &__phone {
@@ -277,6 +336,15 @@ defineProps<{
       height: 140px;
       right: -120px;
       top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 54px;
+        height: 105px;
+        right: -72px;
+        top: 28px;
+        border-radius: 4px;
+      }
     }
 
     &__content {
