@@ -9,9 +9,11 @@ import Footer from '~/components/footer.vue'
 <template>
   <div class="home">
     <NavBar/>
-    <AboutMe/>
-    <TechSkills/>
-    <div>
+    <AboutMe id="about"/>
+
+    <TechSkills id="skills"/>
+
+    <div id="projects">
       <Projects/>
     </div>
     <Footer/>

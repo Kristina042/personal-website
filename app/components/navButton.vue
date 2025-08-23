@@ -1,11 +1,32 @@
 <template>
-  <div class="nav-button">{{ text }}</div>
+  <div
+    class="nav-button"
+    @click="scrollToSection"
+  >
+    {{ text }}
+  </div>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
-  text: string
+const props = defineProps<{
+  text: string,
+  target: string,
+  targetBlock?: ScrollLogicalPosition
 }>()
+
+const emit = defineEmits(["download-cv"])
+
+const scrollToSection = () => {
+
+  if (props.text == 'CV') {
+    emit("download-cv")
+    return
+  }
+
+  const el = document.getElementById(props.target)
+  if (!el) return
+  el.scrollIntoView({ behavior: "smooth", block: props.targetBlock || 'start' })
+}
 </script>
 
 <style scoped lang="scss">

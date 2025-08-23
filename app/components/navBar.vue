@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import NavButton from './navButton.vue'
+
+const navigateToCv = ()  => {
+  window.open("/CV - Christine Miaekivi.pdf", "_blank")
+}
 </script>
 
 <template>
   <div class="nav-bar">
-    <NavButton class="nav-bar__item" text="About Me"/>
-    <NavButton class="nav-bar__item" text="Skills"/>
-    <NavButton class="nav-bar__item" text="Projects"/>
-    <NavButton  class="nav-bar__CV" text="CV"/>
+    <NavButton class="nav-bar__item" text="About Me" target="about"/>
+    <NavButton class="nav-bar__item" text="Skills" target="skills" target-block="center"/>
+    <NavButton class="nav-bar__item" text="Projects" target="projects"/>
+    <NavButton  class="nav-bar__CV" text="CV" target="cv" @download-cv="navigateToCv"/>
   </div>
 </template>
 
