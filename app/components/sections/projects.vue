@@ -2,9 +2,15 @@
 import OpenTag from '~/assets/svg/OpenTag.svg'
 import Endtag from '~/assets/svg/EndTag.svg'
 import ProjectCard from '../projectCard.vue'
+import LaptopTicTacToe from '~/assets/laptop_tictactoe.png'
+import LaptopPersonalWebsite from '~/assets/laptop_personal-website.png'
+import MobilePersonalWebsite from '~/assets/mobile_personal-website.png'
+import MobileTicTacToe from '~/assets/mobile-tictactoe.png'
 
-const description =
+const descriptionTicTacToe =
   'A real-time, browser-based TicTacToe game where players can create or join matches, play against friends or random opponents, and see instant updates using WebSocket-powered communication. Designed with a clean UI and responsive gameplay for both desktop and mobile.'
+
+const descriptionPersonalWebsite='My personal website, the goal of which is to showcase my frontend skills'
 </script>
 
 <template>
@@ -16,11 +22,10 @@ const description =
     </div>
 
     <div class="section__cards">
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
-      <ProjectCard title="Multiplayer TicTacToe" :description="description" />
+      <ProjectCard title="Multiplayer TicTacToe" :description="descriptionTicTacToe"  :laptop-image="LaptopTicTacToe" :mobile-image="MobileTicTacToe"/>
+      <ProjectCard title="Personal Website" :description="descriptionPersonalWebsite"  :laptop-image="LaptopPersonalWebsite" :mobile-image="MobilePersonalWebsite"/>
+      <ProjectCard title="Multiplayer TicTacToe" :description="descriptionTicTacToe"  :laptop-image="LaptopTicTacToe" :mobile-image="MobileTicTacToe"/>
+
     </div>
   </div>
 </template>
@@ -30,8 +35,8 @@ const description =
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding: 200px;
+  gap: 50px;
+  padding: 100px;
   margin-bottom: 200px;
   width: 100%;
 
@@ -49,22 +54,45 @@ const description =
   }
 
   &__cards {
-    max-width: 1400px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 44px;
-  }
-
-  &__line1 {
-    position: absolute;
-    top: 0px;
     width: 100%;
   }
 
-  &__line2 {
-    position: absolute;
-    top: 80px;
-    width: 100%;
+  /* Large Mobile */
+  @media (min-width: 30rem) {}
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
   }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+    padding: 200px;
+    gap: 80px;
+
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Large Desktop */
+  @media (min-width: 90rem) {
+    padding: 200px;
+    gap: 80px;
+
+    &__cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* 4K */
+  @media (min-width: 240rem) {}
+
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import nuxtIcon from "~/assets/svg/nuxt.svg";
+import nuxtIcon from "~/assets/svg/skills/nuxt.svg";
 import linkedInIcon from '~/assets/svg/linkedIn.svg'
 import gitHubIcon from '~/assets/svg/gitHub.svg'
 </script>
@@ -41,7 +41,7 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
 
   &__top {
     padding-bottom: 5px;
-    padding-left: 128px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -57,7 +57,7 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
   }
 
   &__rights {
-    padding-left: 128px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     font-weight: 400;
@@ -65,10 +65,72 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
   }
 
   &__icons {
-    padding-right: 128px;
+    padding-right:  10px;
     align-items: center;
     display: flex;
-    gap: 20px;
+    gap: 10px;
   }
+
+  /* Large Mobile */
+  @media (min-width: 30rem) {
+    &__top {
+      padding-left: 25px;
+    }
+
+    &__rights {
+      padding-left: 25px;
+    }
+
+    &__icons {
+      padding-right: 25px;
+      gap: 20px;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    &__top {
+      padding-left: 50px;
+    }
+
+    &__rights {
+      padding-left: 50px;
+    }
+
+    &__icons {
+      padding-right: 50px;
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+    &__top {
+      padding-left: 90px;
+    }
+
+    &__rights {
+      padding-left: 90px;
+    }
+
+    &__icons {
+      padding-right: 90px;
+    }
+  }
+
+  /* Large Desktop */
+  @media (min-width: 90rem) {
+    &__top {
+      padding-left: 128px;
+    }
+
+    &__rights {
+      padding-left: 128px;
+    }
+
+    &__icons {
+      padding-right: 128px;
+    }
+  }
+
 }
 </style>

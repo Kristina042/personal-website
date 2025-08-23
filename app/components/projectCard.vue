@@ -1,8 +1,9 @@
-//TODO pass images as props
 <script lang="ts" setup>
 defineProps<{
   title: string
   description: string
+  laptopImage: string
+  mobileImage: string
 }>()
 </script>
 
@@ -13,7 +14,9 @@ defineProps<{
       <div class="project-card__content__title">{{ title }}</div>
       <div class="project-card__images">
         <img class="project-card__laptop" src="/assets/laptop.png"/>
+        <img class="project-card__laptop-image" :src="laptopImage"/>
         <img class="project-card__phone" src="/assets/phone.png"/>
+        <img class="project-card__phone-image" :src="mobileImage"/>
       </div>
       <div class="project-card__content__description">{{ description }}</div>
     </div>
@@ -35,11 +38,11 @@ defineProps<{
   justify-content: space-between;
   align-items: center;
 
-  width: 420px;
-  height: 460px;
+  width: 340px;
+  height: 430px;
   border-radius: 12px;
 
-  padding: 24px 29px 16px;
+  padding: 24px 20px 16px;
 
   font-weight: 600;
   line-height: 100%;
@@ -66,25 +69,40 @@ defineProps<{
 
   &__laptop {
     position: absolute;
-    width: 230px;
-    height: 130px;
-    right: -50px;
+    width: 200px;
+    height: 110px;
+    right: -10px;
 
+    &-image {
+      position: absolute;
+      width: 163px;
+      height: 97px;
+      right: 9px;
+      bottom: 14px;
+    }
   }
 
   &__phone {
     position: absolute;
-    width: 150px;
-    height: 140px;
-    right: -120px;
+    width: 130px;
+    height: 120px;
+    right: -70px;
     top: 10px;
+
+    &-image {
+      position: absolute;
+      width: 48px;
+      height: 89px;
+      right: -29px;
+      top: 26px;
+      border-radius: 4px;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding-bottom: 20px;
+    gap: 10px;
 
     &__title {
       font-size: 22px;
@@ -93,8 +111,8 @@ defineProps<{
 
     &__description {
       font-weight: 400;
-      font-size: 15px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 1.5;
     }
   }
 
@@ -112,10 +130,10 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 160px;
+    width: 130px;
     height: 30px;
     border-radius: 10px;
-    background-color: rgba($color: $black, $alpha: 0.5);
+    background-color: rgba(#fff, 0.05);
   }
 
   &__source-and-tech {
@@ -132,6 +150,218 @@ defineProps<{
     width: 100%;
     border-radius: 8px;
     height: 30px;
+  }
+
+  /* Large Mobile */
+  @media (min-width: 30rem) {
+    width: 420px;
+    height: 460px;
+    border-radius: 16px;
+    padding: 24px 29px 16px;
+
+    &__images {
+      width: 240px;
+      height: 120px;
+    }
+
+    &__laptop {
+      position: absolute;
+      width: 230px;
+      height: 130px;
+      right: -50px;
+
+      &-image{
+        position: absolute;
+        width: 188px;
+        height: 115px;
+        right: -29px;
+        bottom: 5px;
+      }
+    }
+
+    &__phone {
+      position: absolute;
+      width: 150px;
+      height: 140px;
+      right: -120px;
+      top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 54px;
+        height: 105px;
+        right: -72px;
+        top: 28px;
+        border-radius: 4px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-bottom: 20px;
+
+      &__title {
+        font-size: 22px;
+        align-self: center;
+      }
+
+      &__description {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    &__buttons {
+      font-size: 12px;
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 160px;
+      height: 30px;
+      border-radius: 10px;
+      background-color: rgba(#ffffff, 0.05);
+    }
+
+    &__source-and-tech {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__demo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: $green, $alpha: 0.5);
+      width: 100%;
+      border-radius: 8px;
+      height: 30px;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    width: 340px;
+    height: 430px;
+    padding: 24px 20px 16px;
+    border-radius: 20px;
+
+    &__laptop {
+      position: absolute;
+      width: 200px;
+      height: 110px;
+      right: -10px;
+
+      &-image {
+        position: absolute;
+        width: 163px;
+        height: 97px;
+        right: 9px;
+        bottom: 14px;
+      }
+    }
+
+    &__phone {
+      position: absolute;
+      width: 130px;
+      height: 120px;
+      right: -70px;
+      top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 48px;
+        height: 89px;
+        right: -29px;
+        top: 26px;
+        border-radius: 4px;
+      }
+    }
+
+    &__content {
+      gap: 8px;
+
+      &__description {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+
+    &__buttons {
+      gap: 8px;
+    }
+
+    &__button {
+      width: 130px;
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+    width: 420px;
+    height: 460px;
+    border-radius: 16px;
+    padding: 24px 29px 16px;
+
+    &__laptop {
+      position: absolute;
+      width: 230px;
+      height: 130px;
+      right: -50px;
+
+      &-image{
+        position: absolute;
+        width: 186px;
+        height: 115px;
+        right: -28px;
+        bottom: 5px;
+      }
+    }
+
+    &__phone {
+      position: absolute;
+      width: 150px;
+      height: 140px;
+      right: -120px;
+      top: 10px;
+
+      &-image {
+        position: absolute;
+        width: 54px;
+        height: 105px;
+        right: -72px;
+        top: 28px;
+        border-radius: 4px;
+      }
+    }
+
+    &__content {
+      gap: 30px;
+      padding-bottom: 20px;
+
+
+      &__description {
+        font-size: 15px;
+        line-height: 22px;
+      }
+    }
+
+    &__button {
+      width: 160px;
+      height: 30px;
+    }
   }
 }
 </style>

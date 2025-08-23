@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     display: 'swap',
   },
   vite: {
-    plugins: [svgLoader()],
+    plugins: [svgLoader({
+      svgo: false
+    })],
     css: {
       preprocessorOptions: {
         scss: {

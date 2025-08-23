@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OpenTag from '~/assets/svg/OpenTag.svg'
+import Endtag from '~/assets/svg/EndTag.svg'
 import { IconNames } from '~/enums/IconNames'
 import { iconsNameSvgMap } from '~/assets/svg/index'
 import SkillComponent from '../skillComponent.vue'
@@ -6,36 +8,42 @@ import 'vue3-carousel/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
 
 import PaintBrush from '~/assets/paint-brush.png'
-
+import Gear from '~/assets/gear.png'
+import Clock from '~/assets/clock.png'
 
 const iconNames = Object.values(IconNames)
 
-
 const backendSkills = [
-  { text: 'Node.js', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Express', icon: iconsNameSvgMap[IconNames.GRAPHQL] }
+  { text: 'Node.js', icon: iconsNameSvgMap[IconNames.NODE] },
+  { text: 'Express', icon: iconsNameSvgMap[IconNames.EXPRESS] },
+  { text: 'Supabase', icon: iconsNameSvgMap[IconNames.SUPABSE] },
+  { text: 'Firebase', icon: iconsNameSvgMap[IconNames.FIREBASE] },
+  { text: 'C', icon: iconsNameSvgMap[IconNames.C] },
 ]
 
 const frontendSkills = [
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.RXJS] },
-  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.ANGULAR]},
-  { text: 'frontend', icon: iconsNameSvgMap[IconNames.NUXT] }
+  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.TS] },
+  { text: 'JavaScript', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
+  { text: 'Angular', icon: iconsNameSvgMap[IconNames.ANGULAR]},
+  { text: 'RxJS', icon: iconsNameSvgMap[IconNames.RXJS] },
+  { text: 'NGRX', icon: iconsNameSvgMap[IconNames.NGRX] },
+  { text: 'Vue.js', icon: iconsNameSvgMap[IconNames.VUE]},
+  { text: 'Nuxt', icon: iconsNameSvgMap[IconNames.NUXT] },
+  { text: 'Pinia', icon: iconsNameSvgMap[IconNames.PINIA] },
+  { text: 'SCSS/SASS', icon: iconsNameSvgMap[IconNames.SCSS] },
+  { text: 'Tailwind', icon: iconsNameSvgMap[IconNames.TAILWIND] },
+  { text: 'GraphQL', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'REST API', icon: iconsNameSvgMap[IconNames.REST] },
+  { text: 'HTML5', icon: iconsNameSvgMap[IconNames.HTML]},
+  { text: 'CSS3', icon: iconsNameSvgMap[IconNames.CSS] },
 ]
 
 const managementSkills = [
-  { text: 'Jira', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
-  { text: 'Agile', icon: iconsNameSvgMap[IconNames.ANGULAR] }
+  { text: 'Jira', icon: iconsNameSvgMap[IconNames.JIRA] },
+  { text: 'GitHub', icon: iconsNameSvgMap[IconNames.GITHUB] },
+  { text: 'GitLab', icon: iconsNameSvgMap[IconNames.GITLAB] },
+  { text: 'notion', icon: iconsNameSvgMap[IconNames.NOTION]},
+  { text: 'confluence', icon: iconsNameSvgMap[IconNames.CONFLUENCE]},
 ]
 
 const slides = ref([
@@ -45,9 +53,9 @@ const slides = ref([
 ])
 
 const titles = ref([
-  { icon: PaintBrush, text: 'Back-End' },
+  { icon: Gear, text: 'Back-End' },
   { icon: PaintBrush, text: 'Front-End' },
-  { icon: PaintBrush, text: 'Management' },
+  { icon: Clock, text: 'Management' },
 ])
 
 const carouselConfig = {
@@ -101,7 +109,9 @@ onUnmounted(() => clearInterval(intervalId))
   >
 
     <div class="tech-skills__title">
-      Tech Skills
+      <OpenTag />
+      <div>Tech Skills</div>
+      <Endtag />
     </div>
 
     <div class="tech-skills__nav">
@@ -135,7 +145,6 @@ onUnmounted(() => clearInterval(intervalId))
             :text="skill.text"
           />
         </div>
-
       </Slide>
     </Carousel>
   </div>
@@ -143,9 +152,9 @@ onUnmounted(() => clearInterval(intervalId))
 
 <style scoped lang="scss">
 .tech-skills {
-  background-color: rgba($white, 0.01);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba($white, 0.02);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 
   display: flex;
   flex-direction: column;
@@ -155,31 +164,34 @@ onUnmounted(() => clearInterval(intervalId))
 
 
   &__carousel {
-    width: 100%;
+    max-width: 370px;
     overflow: hidden;
   }
 
   &__slide {
+    max-width: 370px;
     display: flex;
-    width: 100%;
-    max-height: 200px;
   }
 
   &__skills-wrapper {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    column-gap: 12px;
-    row-gap: 8px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 8px;
+    row-gap: 10px;
     padding: 30px 0;
   }
 
   &__title {
-    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
     font-weight: 700;
     font-family: "Roboto Mono";
 
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &__nav {
@@ -201,16 +213,6 @@ onUnmounted(() => clearInterval(intervalId))
   }
 
   &__nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    cursor: pointer;
-
-    height: 40px;
-
-    font-size: 16px;
     font-family: "Allerta Stencil";
 
     opacity: 0.75;
@@ -218,8 +220,11 @@ onUnmounted(() => clearInterval(intervalId))
     transition: font-size ease-in-out .1s;
     transform-origin: center;
 
+    display: none;
+
     &--active {
-      font-size: 32px;
+      display: block;
+      font-size: 28px;
 
       opacity: unset;
 
@@ -237,7 +242,7 @@ onUnmounted(() => clearInterval(intervalId))
 
   &__nav-progress-wrapper {
     background-color: rgba($white, 0.5);
-    width: 200px;
+    width: 150px;
     height: 6px;
     border-radius: 24px;
   }
@@ -252,6 +257,65 @@ onUnmounted(() => clearInterval(intervalId))
     transition: width ease 0.5s;
   }
 
+    /* Large Mobile */
+  @media (min-width: 30rem) {
+    &__skills-wrapper {
+      column-gap: 14px;
+      row-gap:14px;
+      padding: 30px 0;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 48rem) {
+    &__skills-wrapper {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__nav-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      cursor: pointer;
+
+      &--active {
+        font-size: 32px;
+
+        opacity: unset;
+
+        .tech-skills__nav-img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  /* Laptop */
+  @media (min-width: 64rem) {
+
+    &__skills-wrapper {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+  }
+
+  /* Large Desktop */
+  @media (min-width: 90rem) {
+    &__skills-wrapper {
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
 }
 
 
