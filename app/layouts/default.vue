@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
     height: 200px;
     width: 200px;
 
-    position: absolute;
+    position: fixed;
     left: var(--x);
     top: var(--y);
 

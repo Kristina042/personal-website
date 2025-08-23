@@ -14,15 +14,15 @@ import Clock from '~/assets/clock.png'
 const iconNames = Object.values(IconNames)
 
 const backendSkills = [
-  { text: 'Node.js', icon: iconsNameSvgMap[IconNames.ANGULAR] },
-  { text: 'Express', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
-  { text: 'Supabase', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
-  { text: 'Firebase', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
-  { text: 'C', icon: iconsNameSvgMap[IconNames.GRAPHQL] },
+  { text: 'Node.js', icon: iconsNameSvgMap[IconNames.NODE] },
+  { text: 'Express', icon: iconsNameSvgMap[IconNames.EXPRESS] },
+  { text: 'Supabase', icon: iconsNameSvgMap[IconNames.SUPABSE] },
+  { text: 'Firebase', icon: iconsNameSvgMap[IconNames.FIREBASE] },
+  { text: 'C', icon: iconsNameSvgMap[IconNames.C] },
 ]
 
 const frontendSkills = [
-  { text: 'TypeScript', icon: PaintBrush },
+  { text: 'TypeScript', icon: iconsNameSvgMap[IconNames.TS] },
   { text: 'JavaScript', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
   { text: 'Angular', icon: iconsNameSvgMap[IconNames.ANGULAR]},
   { text: 'RxJS', icon: iconsNameSvgMap[IconNames.RXJS] },
@@ -39,9 +39,11 @@ const frontendSkills = [
 ]
 
 const managementSkills = [
-  { text: 'Jira', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
-  { text: 'GitHub', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
-  { text: 'GitLab', icon: iconsNameSvgMap[IconNames.JAVASCRIPT] },
+  { text: 'Jira', icon: iconsNameSvgMap[IconNames.JIRA] },
+  { text: 'GitHub', icon: iconsNameSvgMap[IconNames.GITHUB] },
+  { text: 'GitLab', icon: iconsNameSvgMap[IconNames.GITLAB] },
+  { text: 'notion', icon: iconsNameSvgMap[IconNames.NOTION]},
+  { text: 'confluence', icon: iconsNameSvgMap[IconNames.CONFLUENCE]},
 ]
 
 const slides = ref([
@@ -150,9 +152,9 @@ onUnmounted(() => clearInterval(intervalId))
 
 <style scoped lang="scss">
 .tech-skills {
-  background-color: rgba($white, 0.01);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background-color: rgba($white, 0.02);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 
   display: flex;
   flex-direction: column;

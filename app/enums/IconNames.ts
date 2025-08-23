@@ -13,4 +13,14 @@ export enum IconNames {
   REST = 'REST',
   HTML = 'HTML',
   CSS = 'CSS',
+  JIRA = 'Jira',
+  NODE = 'Node.js',
+  SUPABSE = 'Supabase',
+  C = 'C',
+  EXPRESS = 'Express',
+  FIREBASE = 'Firebase',
+  GITLAB = 'gitlab',
+  GITHUB = 'github',
+  NOTION = 'Notion',
+  CONFLUENCE = 'confluence'
 }
