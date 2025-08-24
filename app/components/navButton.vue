@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
   text: string,
-  target: string,
+  target?: string,
   targetBlock?: ScrollLogicalPosition
 }>()
 
@@ -23,6 +23,8 @@ const scrollToSection = () => {
     return
   }
 
+  if (!props.target) return
+
   const el = document.getElementById(props.target)
   if (!el) return
   el.scrollIntoView({ behavior: "smooth", block: props.targetBlock || 'start' })
@@ -34,8 +36,8 @@ const scrollToSection = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 120px;
-  padding: 10px 14px;
+  min-width: 90px;
+  padding: 12px 14px;
 
   font-size: 14px;
   font-weight: 400;
@@ -55,6 +57,7 @@ const scrollToSection = () => {
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
 
   &:active {
@@ -64,9 +67,14 @@ const scrollToSection = () => {
       inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   }
 
+  /* Large Mobile */
+  @media (min-width: 30rem) {
+    min-width: 120px;
+  }
+
   /* Tablet */
   @media (min-width: 48rem) {
-    min-width: 155px;
+    min-width: 150px;
     padding: 12px 16px;
 
     font-size: 16px;

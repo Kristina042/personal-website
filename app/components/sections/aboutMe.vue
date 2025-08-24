@@ -1,11 +1,40 @@
+<script setup lang="ts">
+import gitHubSvg from '~/assets/svg/skills/github.svg'
+import linkedInSvg from '~/assets/svg/linkedIn.svg'
+
+const navigateToGithub = () => {
+  window.open("https://github.com/Kristina042", "_blank")
+}
+
+const navigateToLinkedin = () => {
+  window.open("https://www.linkedin.com/in/christine-miaekivi-b17980331/", "_blank")
+}
+</script>
+
 <template>
   <div class="section">
 
     <div class="section__text">
       <div class="section__title-and-profile">
         <div class="section__name-and-title">
-          <div class="section__name">👋 Hi, I'm Christine</div>
-          <div class="section__title">Software Engineer</div>
+
+          <div class="section__name-and-icons">
+            <div class="section__name">👋 Hi, I'm Christine</div>
+            <div class="section__icons--tablet">
+              <gitHubSvg class="section__icon" @click="navigateToGithub"/>
+              <linkedInSvg class="section__icon" @click = "navigateToLinkedin"/>
+            </div>
+          </div>
+
+          <div class="section__title-and-icons">
+            <div class="section__title">Software Engineer</div>
+
+            <div class="section__icons--laptop">
+              <gitHubSvg class="section__icon" @click="navigateToGithub"/>
+              <linkedInSvg class="section__icon" @click = "navigateToLinkedin"/>
+            </div>
+          </div>
+
         </div>
         <img class="section__profile-picture section__profile-picture--mobile" src="assets/profile.png" />
       </div>
@@ -21,9 +50,6 @@
 </template>
 
 
-
-
-
 <style scoped lang="scss">
 
 //mobile
@@ -33,8 +59,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 130px 20px 80px;
+
+    &__icons--laptop, &__icons--tablet{
+      display:none;
+    }
+
+    &__icon:hover {
+      cursor:pointer;
+      transform: scale(1.2);
+    }
+
 
   &__text {
     padding: 0px;
@@ -137,6 +172,27 @@
     flex-direction: row;
     gap: 100px;
 
+    &__icons--laptop {
+      display:none;
+    }
+
+    &__icons--tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px
+    }
+
+    &__name-and-icons {
+      display: flex;
+      gap: 30px;
+    }
+
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+
     &__text {
       display: flex;
       flex-direction: column;
@@ -155,7 +211,7 @@
       font-weight: 400;
       font-size: 42px;
       text-wrap: nowrap;
-      min-width: 400px;
+      min-width: 420px;
     }
 
     &__description {
@@ -194,10 +250,32 @@
     flex-direction: row;
     gap: 100px;
 
+    &__icons--tablet {
+      display:none;
+    }
+
+    &__title-and-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__icons--laptop {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+    }
+
     &__text {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 50px;
       max-width: 850px;
     }
 

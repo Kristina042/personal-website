@@ -11,6 +11,23 @@ const descriptionTicTacToe =
   'A real-time, browser-based TicTacToe game where players can create or join matches, play against friends or random opponents, and see instant updates using WebSocket-powered communication. Designed with a clean UI and responsive gameplay for both desktop and mobile.'
 
 const descriptionPersonalWebsite='My personal website, the goal of which is to showcase my frontend skills'
+
+const ticTacToeDemo = () => {
+  window.open("https://tictactoe.miaekivi.com/", "_blank")
+}
+
+const ticTacToeGithub = () => {
+  window.open("https://github.com/Kristina042/TickTackToe", "_blank")
+}
+
+const websiteDemo = () => {
+  window.open("https://miaekivi.com/", "_blank")
+}
+
+
+const websiteGithub = () => {
+  window.open("https://github.com/Kristina042/personal-website", "_blank")
+}
 </script>
 
 <template>
@@ -22,10 +39,22 @@ const descriptionPersonalWebsite='My personal website, the goal of which is to s
     </div>
 
     <div class="section__cards">
-      <ProjectCard title="Multiplayer TicTacToe" :description="descriptionTicTacToe"  :laptop-image="LaptopTicTacToe" :mobile-image="MobileTicTacToe"/>
-      <ProjectCard title="Personal Website" :description="descriptionPersonalWebsite"  :laptop-image="LaptopPersonalWebsite" :mobile-image="MobilePersonalWebsite"/>
-      <ProjectCard title="Multiplayer TicTacToe" :description="descriptionTicTacToe"  :laptop-image="LaptopTicTacToe" :mobile-image="MobileTicTacToe"/>
+      <ProjectCard
+        title="Multiplayer TicTacToe"
+        :description="descriptionTicTacToe"
+        :laptop-image="LaptopTicTacToe"
+        :mobile-image="MobileTicTacToe"
+        @go-to-demo="ticTacToeDemo"
+        @go-to-source-code="ticTacToeGithub"
 
+      />
+      <ProjectCard title="Personal Website"
+        :description="descriptionPersonalWebsite"
+        :laptop-image="LaptopPersonalWebsite"
+        :mobile-image="MobilePersonalWebsite"
+        @go-to-demo="websiteDemo"
+        @go-to-source-code="websiteGithub"
+      />
     </div>
   </div>
 </template>
@@ -78,6 +107,7 @@ const descriptionPersonalWebsite='My personal website, the goal of which is to s
 
     &__cards {
       grid-template-columns: repeat(2, 1fr);
+      column-gap: 50px;
     }
   }
 
@@ -87,7 +117,7 @@ const descriptionPersonalWebsite='My personal website, the goal of which is to s
     gap: 80px;
 
     &__cards {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

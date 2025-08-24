@@ -2,6 +2,14 @@
 import nuxtIcon from "~/assets/svg/skills/nuxt.svg";
 import linkedInIcon from '~/assets/svg/linkedIn.svg'
 import gitHubIcon from '~/assets/svg/gitHub.svg'
+
+const navigateToGithub = () => {
+  window.open("https://github.com/Kristina042", "_blank")
+}
+
+const navigateToLinkedin = () => {
+  window.open("https://www.linkedin.com/in/christine-miaekivi-b17980331/", "_blank")
+}
 </script>
 
 <template>
@@ -16,9 +24,9 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
     <div class="footer__bottom">
       <div class="footer__rights">© 2025 Christine Miaekivi, All rights reserved.</div>
       <div class="footer__icons">
-        <linkedInIcon/>
-        <gitHubIcon/>
-        <img src="/assets/Medium-Icon.png"/>
+        <linkedInIcon class="footer__icon" @click="navigateToLinkedin"/>
+        <gitHubIcon class="footer__icon" @click="navigateToGithub"/>
+        <!-- <img src="/assets/Medium-Icon.png"/> -->
       </div>
     </div>
 
@@ -38,6 +46,10 @@ import gitHubIcon from '~/assets/svg/gitHub.svg'
   justify-content: center;
   gap: 10px;
   padding-bottom: 10px;
+
+  &__icon:hover {
+    cursor: pointer;
+  }
 
   &__top {
     padding-bottom: 5px;
