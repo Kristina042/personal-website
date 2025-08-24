@@ -10,7 +10,7 @@ import MobileTicTacToe from '~/assets/mobile-tictactoe.png'
 const descriptionTicTacToe =
   'A real-time, browser-based TicTacToe game where players can create or join matches, play against friends or random opponents, and see instant updates using WebSocket-powered communication. Designed with a clean UI and responsive gameplay for both desktop and mobile.'
 
-const descriptionPersonalWebsite='My personal website, the goal of which is to showcase my frontend skills'
+const descriptionPersonalWebsite='I developed my personal website with Nuxt 4 using a static site generation (SSG) strategy, designed to highlight my frontend development skills'
 
 const ticTacToeDemo = () => {
   window.open("https://tictactoe.miaekivi.com/", "_blank")

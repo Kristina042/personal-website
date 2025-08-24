@@ -37,8 +37,8 @@ const isSvg = computed(() => typeof props.icon === 'object')
   font-family: 'Roboto Condensed';
   color: $white;
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   background-color: rgba(0, 0, 0, 0.4);
