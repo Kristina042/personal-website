@@ -60,7 +60,7 @@ const onDemoClick = () => {
   color: $white;
 
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(1px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow:
