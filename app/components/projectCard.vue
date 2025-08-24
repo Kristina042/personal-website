@@ -5,6 +5,16 @@ defineProps<{
   laptopImage: string
   mobileImage: string
 }>()
+
+const emit = defineEmits(["go-to-source-code", "go-to-demo"])
+
+const onSourceCodeClick = () => {
+  emit("go-to-source-code")
+}
+
+const onDemoClick = () => {
+  emit("go-to-demo")
+}
 </script>
 
 <template>
@@ -23,10 +33,10 @@ defineProps<{
 
     <div class="project-card__buttons">
       <div class="project-card__source-and-tech">
-        <div class="project-card__button">Source Code</div>
-        <div class="project-card__button">Tech Details</div>
+        <div class="project-card__button" @click="onSourceCodeClick">Source Code</div>
+        <!-- <div class="project-card__button">Tech Details</div> -->
       </div>
-      <div class="project-card__demo">Live Demo App</div>
+      <div class="project-card__demo" @click="onDemoClick">Live Demo App</div>
     </div>
   </div>
 </template>
@@ -42,7 +52,7 @@ defineProps<{
   height: 430px;
   border-radius: 12px;
 
-  padding: 24px 20px 16px;
+  padding: 25px 20px 25px;
 
   font-weight: 600;
   line-height: 100%;
@@ -102,7 +112,7 @@ defineProps<{
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 
     &__title {
       font-size: 22px;
@@ -120,8 +130,8 @@ defineProps<{
     font-size: 12px;
     width: 100%;
     display: flex;
-    gap: 10px;
-    flex-direction: column;
+    gap: 20px;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
@@ -130,10 +140,14 @@ defineProps<{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 130px;
+    width:100%;
     height: 30px;
     border-radius: 10px;
-    background-color: rgba(#fff, 0.05);
+    background-color: rgba(#000000, 0.7);
+
+    &:hover {
+      cursor:pointer;
+    }
   }
 
   &__source-and-tech {
@@ -150,6 +164,10 @@ defineProps<{
     width: 100%;
     border-radius: 8px;
     height: 30px;
+
+    &:hover {
+      cursor:pointer;
+    }
   }
 
   /* Large Mobile */
@@ -157,7 +175,7 @@ defineProps<{
     width: 420px;
     height: 460px;
     border-radius: 16px;
-    padding: 24px 29px 16px;
+    padding: 25px 29px 25px;
 
     &__images {
       width: 240px;
@@ -199,7 +217,7 @@ defineProps<{
     &__content {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 40px;
       padding-bottom: 20px;
 
       &__title {
@@ -215,23 +233,18 @@ defineProps<{
     }
 
     &__buttons {
-      font-size: 12px;
+      font-size: 14px;
       width: 100%;
       display: flex;
-      gap: 10px;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      gap: 20px;
     }
 
     &__button {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 160px;
-      height: 30px;
+      height: 35px;
       border-radius: 10px;
-      background-color: rgba(#ffffff, 0.05);
     }
 
     &__source-and-tech {
@@ -255,7 +268,7 @@ defineProps<{
   @media (min-width: 48rem) {
     width: 340px;
     height: 430px;
-    padding: 24px 20px 16px;
+    padding: 25px 29px 25px;
     border-radius: 20px;
 
     &__laptop {
@@ -291,7 +304,7 @@ defineProps<{
     }
 
     &__content {
-      gap: 8px;
+      gap: 20px;
 
       &__description {
         font-size: 14px;
@@ -300,11 +313,7 @@ defineProps<{
     }
 
     &__buttons {
-      gap: 8px;
-    }
-
-    &__button {
-      width: 130px;
+      gap: 20px;
     }
   }
 
@@ -313,7 +322,7 @@ defineProps<{
     width: 420px;
     height: 460px;
     border-radius: 16px;
-    padding: 24px 29px 16px;
+    padding: 25px 29px 25px;
 
     &__laptop {
       position: absolute;
@@ -347,8 +356,12 @@ defineProps<{
       }
     }
 
+    &__buttons {
+      gap:20px;
+    }
+
     &__content {
-      gap: 30px;
+      gap: 40px;
       padding-bottom: 20px;
 
 
@@ -358,10 +371,7 @@ defineProps<{
       }
     }
 
-    &__button {
-      width: 160px;
-      height: 30px;
-    }
+
   }
 }
 </style>

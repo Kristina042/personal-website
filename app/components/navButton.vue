@@ -1,11 +1,34 @@
 <template>
-  <div class="nav-button">{{ text }}</div>
+  <div
+    class="nav-button"
+    @click="scrollToSection"
+  >
+    {{ text }}
+  </div>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
-  text: string
+const props = defineProps<{
+  text: string,
+  target?: string,
+  targetBlock?: ScrollLogicalPosition
 }>()
+
+const emit = defineEmits(["download-cv"])
+
+const scrollToSection = () => {
+
+  if (props.text == 'CV') {
+    emit("download-cv")
+    return
+  }
+
+  if (!props.target) return
+
+  const el = document.getElementById(props.target)
+  if (!el) return
+  el.scrollIntoView({ behavior: "smooth", block: props.targetBlock || 'start' })
+}
 </script>
 
 <style scoped lang="scss">
@@ -13,8 +36,8 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 120px;
-  padding: 10px 14px;
+  min-width: 90px;
+  padding: 12px 14px;
 
   font-size: 14px;
   font-weight: 400;
@@ -34,6 +57,7 @@ defineProps<{
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
 
   &:active {
@@ -43,9 +67,14 @@ defineProps<{
       inset 0 -1px 0 rgba(255, 255, 255, 0.1);
   }
 
+  /* Large Mobile */
+  @media (min-width: 30rem) {
+    min-width: 120px;
+  }
+
   /* Tablet */
   @media (min-width: 48rem) {
-    min-width: 155px;
+    min-width: 150px;
     padding: 12px 16px;
 
     font-size: 16px;
