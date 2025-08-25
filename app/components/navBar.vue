@@ -2,7 +2,7 @@
 import NavButton from './navButton.vue'
 
 const navigateToCv = ()  => {
-  window.open("/CV - Christine Miaekivi.pdf", "_blank")
+  window.open("/CV_Christine Miaekivi.pdf", "_blank")
 }
 
 const navigateToGithub = () => {
